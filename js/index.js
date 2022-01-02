@@ -1,6 +1,5 @@
 $(document).ready(function(){
-    $('.nav_link_now').parent().css('background-color',"rgba(192, 37, 231, 0.705)");
-
+    
     $("#gototop").click(function() {
       $('html,body').animate({ scrollTop: 0 }, 'ease-in-out');
       return false;
@@ -15,8 +14,6 @@ $(document).ready(function(){
   }); 
   
   
-  
-  
     window.onscroll = function() {
       var scrollTop = $(document).scrollTop();
       if (scrollTop > 100) {
@@ -25,9 +22,6 @@ $(document).ready(function(){
           $("#gototop").fadeOut();
     };
   };
-  
-  
-  
   
 
   // nav 
