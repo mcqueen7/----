@@ -4,117 +4,182 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css"> -->
+    <link rel="stylesheet" href="./css/vender/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="./css/vender/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/vender/animate.min.css">
     <link rel="stylesheet" href="./css/indexstyle.css">
+    <link rel="shortcut icon" href="./images/favicon3.ico" type="image/x-icon">
     
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+    <script type="text/javascript" src="./js/vender/jQuery.js"></script>
+    <script type="text/javascript" src="./js/vender/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/vender/gsap.min.js"></script>
+    <script type="text/javascript" src="./js/vender/jquery.flexslider.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
-   
-    <link rel="stylesheet" href="./css/flexslider.css" type="text/css">
-    
-    <script src="./js/jquery.flexslider.js"></script>
+    <!-- <script type="text/javascript" src="./js/vender/wow.min.js"></script> -->
 
-    <link rel="icon" href="./images/fluidicon.png" type="image/x-icon" / >
     <title>校園躲貓貓大賽首頁</title>
 </head>
 <body>
-    
-    <div class="bg">
-        <header class="header">
-            <div class="title_container"> 
-                <img class="logo_picture" src="./images/logo.png" alt="main picture">
-                <nav class="nav_box">
-                    <ul class="nav_list">
-                        <li class="nav_item"><a href="./index.html" class="nav_link_now">首頁</a></li>
-                        <li class="nav_item"><a href="./intro.html" class="nav_link">比賽簡介</a></li>
-                        <li class="nav_item"><a href="./rule.html" class="nav_link">場地規則</a></li>
-                        <li class="nav_item"><a href="./news.html" class="nav_link">最新消息</a></li>
-                        <li class="nav_item" style="border-radius:0 0 35px 0;"><a href="./join.html" class="nav_link">立即報名</a></li>
+    <header>    
+        <nav class="navbar navbar-expand-xl navbar-light bgcolor fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                  <div class="logo_container">
+                  <img src="./images/logo.png" alt="logo">  
+                  <h1 class="logo_title">校園躲貓貓大賽</h1>
+                  </div>
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-icon-bar" menu-click="false"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link nav_active nav-link-font" aria-current="page" href="./index.html">首頁</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link nav-link-font" href="./news.html">最新消息</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nav-link-font" href="./intro.html">比賽簡介</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link nav-link-font" href="./rule.html">場地規則</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link-font" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      立即報名
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="https://mcqueen7.github.io/HTML-Week1/" target="_blank">登入</a></li>
+                      <li><a class="dropdown-item" href="https://mcqueen7.github.io/HTML-Week1/" target="_blank">註冊</a></li>
+                      <li><a class="dropdown-item" href="https://mcqueen7.github.io/HTML_week5/" target="_blank">會員專區</a></li>
                     </ul>
-                </nav>
-                
-            </div> 
-             
-        </header>
-        <dir class="for_slider">
-            <div class="flexslider" style="width:1280px; height:530px;">
-                <ul class="slides">
-                    <li><img src="./images/slide1.png" alt="slide picture1" width="1280" height="530"></li>
-                    <li><img src="./images/slide2.png" alt="slide picture2" width="1280" height="530"></li>
-                    <li><img src="./images/slide3.png" alt="slide picture3" width="1280" height="530"></li>
-                    <li><img src="./images/slide4.png" alt="slide picture4" width="1280" height="530"></li>
-                    <li><img src="./images/slide5.png" alt="slide picture5" width="1280" height="530"></li>
-                    <li><img src="./images/slide6.png" alt="slide picture6" width="1280" height="530"></li>
-                    <li><img src="./images/slide7.png" alt="slide picture7" width="1280" height="530"></li>
-                    <li><img src="./images/slide8.png" alt="slide picture8" width="1280" height="530"></li>
+                  </li>
                 </ul>
+              </div>
             </div>
-        </dir>  
-        <div class="mid_container">
-            <h2 class="hots_title" >熱門消息</h2>
-            <div class="hots_line"></div>
-            <div class="hots_container">
-                <div class="mid_box">
-                    <a href="./news.html" style="text-decoration:none;">
-                        <img class="midbox_img" src="./images/lib.png" alt="picture">
-                        <p class="mid_article">第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！</p>
-                    </a>
+          </nav>
+    </header>
+   <div class="slider_part  d-flex align-items-center justify-content-center">
+       <div class="slider_container ">
+        <div class="flexslider">
+            <ul class="slides">
+                <li><img src="./images/slide1.png" alt="slide"></li>
+                <li><img src="./images/slide2.png" alt="slide"></li>
+                <li><img src="./images/slide3.png" alt="slide"></li>
+                <li><img src="./images/slide4.png" alt="slide"></li>
+                <li><img src="./images/slide5.png" alt="slide"></li>
+                <li><img src="./images/slide6.png" alt="slide"></li>
+                <li><img src="./images/slide7.png" alt="slide"></li>
+                <li><img src="./images/slide8.png" alt="slide"></li>
+            </ul>
+        </div>
+       </div>
+   </div>       
+    <div class="intro_part">
+        <div class="intro_title text-center">比賽總覽</div>
+        <div class="hr"></div>
+        <div class="container-fluid">
+            <div class="container mt-5">
+                <div class="row justify-content-around g-4 ">
+                    <div class="col col-xl-4 col-md-6">
+                        <div class="card_container">
+                            <div class="card3d">
+                                <div class="front1">&nbsp</div>
+                                <div class="back1">比賽場地就在國北教校園!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4 col-md-6">
+                        <div class="card_container">
+                            <div class="card3d">
+                                <div class="front2">&nbsp</div>
+                                <div class="back2">各系派出強勁隊伍競爭激烈!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4 col-md-6">
+                        <div class="card_container">
+                            <div class="card3d ">
+                                <div class="front3">&nbsp</div>
+                                <div class="back1">戰法多樣的躲貓貓比賽!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mid_box">
-                    <a href="./news.html" style="text-decoration:none;">
-                        <img class="midbox_img" src="./images/team.png" alt="picture2">
-                        <p  class="mid_article">xx系派出全員大一的隊伍參賽，已x:o壓倒性成績獲取進入第二輪循環賽的資格！</p>
-                    </a>
-                </div>
-                <div class="mid_box">
-                    <a href="./news.html" style="text-decoration:none;">
-                        <img class="midbox_img" src="./images/principal.png" alt="picture3">
-                        <p  class="mid_article">Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！</p>
-                    </a>
-                </div>
+            </div> 
+            <div class="more text-center">
+            <a href="./intro.html">更多介紹>></a> 
             </div>
-            <div class="hots_more"><a href="./news.html" class="more" target="_blank">熱門消息 更多+</a></div>
-        </div> 
-        <div class="bottom_container">
-            <h2 class="news_title">最新快訊</h2>
-            <div class="news_line"> </div>
-            <div class="news_container">
-                <div class="bottom_box">
-                    <a href="./news.html" style="text-decoration:none;">
-                        <img class="bottombox_img" src="./images/team.png" alt="picture4">
-                        <p class="bottom_article">第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！</p>  
-                    </a>
-                </div>
-                <div class="bottom_box">
-                    <a href="./news.html" style="text-decoration:none;">
-                        <img class="bottombox_img" src="./images/principal.png" alt="picture5">
-                        <p class="bottom_article">xx系派出全員大一的隊伍參賽，已x:o壓倒性成績獲取進入第二輪循環賽的資格！</p>
-                    </a>
-                </div>
-                <div class="bottom_box">
-                    <a href="./news.html" style="text-decoration:none;">
-                        <img class="bottombox_img" src="./images/lib.png" alt="picture6">
-                        <p class="bottom_article">Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！</p>
-                    </a>
-                </div>
-             </div>
-             <div class="news_more"><a href="./news.html" class="more" target="_blank" >最新快訊 更多+</a></div>
-        </div> 
+        </div>
     </div>
+    <div class="news_part ">
+        <div class="news_title text-center">最新消息</div>
+        <div class="hr"></div>
+        <div class="container-fluid">
+            <div class="container mt-5">
+                <div class="row justify-content-around g-4 ">
+                    <div class="col col-xl-4 col-md-6">
+                            <a href="./news.html" class="news_box">
+                                <div class="card_container">
+                                    <div class="news_img1">&nbsp</div>
+                                    <p class="news_article">Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！</p>
+                                </div>    
+                            </a>
+                    </div>
+                    <div class="col col-xl-4 col-md-6">
+                        <a href="./news.html" class="news_box">
+                            <div class="card_container">
+                                <div class="news_img2">&nbsp</div>
+                                <p class="news_article">xx系派出全員大一的隊伍參賽，已x:o壓倒性成績獲取進入第二輪循環賽的資格！</p>
+                            </div>    
+                        </a>
+                    </div>
+                    <div class="col col-xl-4 col-md-6">
+                        <a href="./news.html" class="news_box">
+                            <div class="card_container">
+                                <div class="news_img3">&nbsp</div>
+                                <p class="news_article">第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！</p>
+                            </div>    
+                        </a>
+                    </div>
+                </div>
+            </div> 
+            <div class="more text-center">
+            <a href="./news.html">更多新聞>></a>  
+            </div>
+        </div>
+    </div>
+        
+   
+    
     <button id="gototop" title="Go to top"><img src="./images/gototop.png" alt="go to top"></button>
+ 
+
     <footer class="footer">
-        <img class="school_icon" src="./images/schoolicon.png" alt="school icon">
-        <img class="logo_picture_bottom" src="./images/logo.png" alt="main picture">
-        <p class="footer_content">電話：(02) 2222-5555&nbsp;&nbsp;&nbsp; E-mail：s11119000@stu.ntue.edu.tw <br> 地址：10671 臺北市大安區和平東路2段134號 <br> Copyright © 國北躲貓貓協會著作所有並保留一切權利
+        <a target="_blank"href="https://www.ntue.edu.tw/"><img class="school_icon" src="./images/schoolicon.png" alt="school icon"></a>
+        <a href="#"><img class="logo_picture_bottom" src="./images/logo.png" alt="logo picture"></a>
+        <p class="footer_content">電話：(02) 2222-5555&nbsp;&nbsp;&nbsp; E-mail：s11119000@stu.ntue.edu.tw <br> 地址：10671 臺北市大安區和平東路2段134號 <br>  國北躲貓貓協會 © 著作所有並保留一切權利
         </p>
         <div class="icon">
-            <a href="https://www.facebook.com/"><img class="fblogo_img" src="./images/fblogo.png" alt="fblogo"></a>
-            <a href="https://www.youtube.com/"><img class="ytlogo_img" src="./images/ytlogo.png" alt="ytlogo"></a>
-            <a href="https://www.instagram.com/"><img class="iglogo_img" src="./images/iglogo.png" alt="iglogo"></a>
-            <a href="https://twitter.com/?lang=zh-tw"><img class="twilogo_img" src="./images/twilogo.png" alt="twilogo"></a>
+            <a target="_blank"href="https://www.facebook.com/"><img class="icon_img" src="./images/FB LOGO.png" alt="fblogo"></a>
+            <a target="_blank"href="https://www.youtube.com/"><img class="icon_img" src="./images/YT LOGO.png" alt="ytlogo"></a>
+            <a target="_blank"href="https://www.instagram.com/"><img class="icon_img" src="./images/IG LOGO.png" alt="iglogo"></a>
+            <a target="_blank"href="https://twitter.com/?lang=zh-tw"><img class="icon_img" src="./images/TWI LOGO.png" alt="twilogo"></a>
         </div>
-        
-     </footer>
+    </footer>
     
     </body>
 </html>
