@@ -15,6 +15,9 @@ body{
     margin:0 auto ;
     font-family: 'Noto Serif TC';  
 }
+.member_btn{
+    cursor: pointer;
+}
 /* ----------------------------------------------------------------------------------------------- */
 .navbar{
     padding-left: 100px;

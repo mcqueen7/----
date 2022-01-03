@@ -120,7 +120,9 @@ text-decoration-line: underline ;
 .dropdown-toggle:not(.show)::after {
     transform: rotate(90deg);
 }
-
+.member_btn{
+    cursor: pointer;
+}
 /* --------------------------nav---------------------------- */
 
 .hr{
@@ -260,6 +262,9 @@ font-family: Arial;
 .chat-username {
     margin-right: 0.4rem;
     font-weight: bold;
+}
+#color{
+    cursor: pointer;
 }
 /* ------------------------------------------------- */
 .name-field,

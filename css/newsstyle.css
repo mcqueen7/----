@@ -120,7 +120,9 @@ text-decoration-line: underline ;
 .dropdown-toggle:not(.show)::after {
     transform: rotate(90deg);
 }
-
+.member_btn{
+    cursor: pointer;
+}
 /* --------------------------nav---------------------------- */
 
 .hr{

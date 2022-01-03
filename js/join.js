@@ -161,6 +161,7 @@ $messageField.keypress(function (e) {
     });
 });
 
+let check=0;
 // Listening Login User
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -177,8 +178,10 @@ firebase.auth().onAuthStateChanged(function (user) {
       avatarName.html(profile.displayName);
       avatarEmail.html(profile.email);
       avatarImage.attr("src", profile.photoURL);
+      check=1;
     });
   } else {
+    check=0;
     console.log("not logged in");
   }
 });
@@ -200,22 +203,23 @@ const $toprofile = $('#toprofile');
 const $tosignout = $('#tosignout');
 var user = firebase.auth().currentUser;
 $tosignin.click(function(){
-  if (user) {
+ 
+  if (check) {
     window.location.href = "./join.html";
   } else {
     window.location.href = "./signin.html";
   }
 });
 $tosignup.click(function(){
-  if (user) {
+  if (check) {
     window.location.href = "./join.html";
   } else {
     window.location.href = "./signup.html";
   }
 });
 
-$tosignout.click(function(){
-  if (user) {
+$toprofile.click(function(){
+  if (check) {
     window.location.href = "./join.html";
   } else {
     window.location.href = "./signin.html";
