@@ -223,9 +223,20 @@ font-family: Arial;
     overflow: auto;
     font-size: 24px;
 }
-.chat_keyin{
-    /* background-color: rgb(232, 237, 246); */
-
+.chat_photo_container{
+    /* background-image: url(../images/min_picture.png); */
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    
+}
+.chat_photo{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 50px;
 }
 .name-field,
 .message-field{

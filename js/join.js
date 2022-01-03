@@ -47,12 +47,15 @@ $messageField.keypress(function (e) {
         let senderName = $nameField.val();
         let message = $messageField.val();
         let color = $color.val();
+        const user = auth.currentUser;
+        let photourl=user.photoURL;
         //SAVE DATA TO FIREBASE
         messagesCollectionRef.add({
             senderName: profile_Name,
             message: message,
             color:color,
             timeStamp: Date.now(),
+            photourl: photourl,
         });
          // EMPTY INPUT FIELD
          $messageField.val('');
@@ -63,12 +66,15 @@ $messageField.keypress(function (e) {
     let senderName = $nameField.val();
     let message = $messageField.val();
     let color = $color.val();
+    const user = auth.currentUser;
+    let photourl=user.photoURL;
     //SAVE DATA TO FIREBASE
     messagesCollectionRef.add({
         senderName: profile_Name,
         message: message,
         color:color,
         timeStamp: Date.now(),
+        photourl: photourl,
     });
      // EMPTY INPUT FIELD
      $messageField.val('');
@@ -80,10 +86,14 @@ $messageField.keypress(function (e) {
       let senderName = doc.data().senderName || "匿名";
       let message = doc.data().message;
       let color =doc.data().color;
+      let photourl =doc.data().photourl;
       let messageItem = `
       <li class="message-item">
-        <strong class="chat-username">${senderName}:</strong>
+        <div class=" d-flex align-items-center">
+        <div class="chat_photo_container"><img class="chat_photo" src="${photourl}"></img></div>
+        <strong class="chat-username ">${senderName}:</strong>
         <span style="color:${color}">${message}</span>
+        </div>
       </li>
       `;
     
@@ -91,6 +101,7 @@ $messageField.keypress(function (e) {
         // $("#message-list").$messageList.addClass("text-right");
         messageItem = `
       <li class="message-item text-end">
+      <div class="chat_photo_container"></div>
         <strong class="chat-username">${senderName}:</strong>
         <span style="color:${color}">${message}</span>
       </li>
@@ -109,11 +120,11 @@ $messageField.keypress(function (e) {
   $btnSignIn.html(`<span class="spinner-border spinner-border-sm"></span>`);
   auth.signInWithEmailAndPassword($email.val(), $password.val())
     .then(function (e) {
-      $btnSignIn.html(`Sign In`);
+      $btnSignIn.html(`登入成功`);
       window.location.href = "./join.html";
     })
     .catch(function (e) {
-      $btnSignIn.html(`Sign In`);
+      $btnSignIn.html(`登入失敗`);
       console.log(e.message);
       $signInfo.html(e.message);
     });
@@ -156,7 +167,7 @@ $messageField.keypress(function (e) {
     });
     })
     .catch(function (e) {
-      $btnSignUp.html(`註冊`);
+      $btnSignUp.html(`註冊失敗`);
       $signInfo.html(e.message);
     });
 });
