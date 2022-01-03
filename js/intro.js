@@ -19,6 +19,62 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
+var t1 = new gsap.timeline({
+  scrollTrigger: {
+      trigger: ".origin_part",
+      pin: false, // pin the trigger element while active
+      start: "center bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=400", // end after scrolling 500px beyond the start
+      // yoyo:true,
+      // scrub: true,
+      // markers: true,
+      id: "origin_part",
+    },
+});
+t1.fromTo(".origin_part",{x: -900,opacity:0},{x:0,opacity:1}).yoyo(true);
+
+
+
+var t2 = new gsap.timeline({
+  scrollTrigger: {
+      trigger: ".minterm_part",
+      pin: false, // pin the trigger element while active
+      start: "center bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=400", // end after scrolling 500px beyond the start
+      // yoyo:true,
+      // scrub: true,
+      // markers: true,
+      id: "minterm_part",
+    },
+});
+t2.fromTo(".minterm_part",{x: 900,opacity:0},{x:0,opacity:1}).yoyo(true);
+
+
+
+var t3 = new gsap.timeline({
+  scrollTrigger: {
+      trigger: ".future_part",
+      pin: false, // pin the trigger element while active
+      start: "center bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=300", // end after scrolling 500px beyond the start
+      // yoyo:true,
+      // scrub: true,
+      // markers: true,
+      id: "future_part",
+    },
+});
+t3.fromTo(".future_part",{x: -900,opacity:0},{x:0,opacity:1}).yoyo(true);
+
+
+
+
+
+
+
+
+
+
+
 
   const $tosignin = $('#tosignin');
 const $tosignup = $('#tosignup');
