@@ -26,6 +26,8 @@
     <script type="text/javascript" src="./js/news.js"></script>
     <!-- <script type="text/javascript" src="./js/vender/wow.min.js"></script> -->
     <title>校園躲貓貓大賽新聞</title>
+    <style class="list-search-style">.container a:not([data-title*="字串"]) {}
+    </style>
 </head>
 <body>
     <header>    
@@ -73,14 +75,21 @@
     <div class="banner_container">
         <img src="./images/mainpicture.png" alt="banner" class="banner_part">
     </div>
+    
     <div class="news_part ">
+        
         <div class="news_title text-center">最新消息</div>
         <div class="hr"></div>
+        <form class="search d-flex">
+            <input class="form-control me-2 search_type" type="text" placeholder="搜尋關鍵字" aria-label="Search" id="search">
+            <button class="btn btn-outline-success search_btn" type="submit" >搜尋</button>
+        </form>
+        
         <div class="container-fluid">
             <div class="container mt-5">
                 <div class="row justify-content-around g-4 ">
                     <div class="col col-xl-4 col-md-6">
-                            <a href="./news.html" class="news_box">
+                            <a href="./news.html" class="news_box" data-title="Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！">
                                 <div class="card_container">
                                     <div class="news_img1">&nbsp</div>
                                     <p class="news_article">Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！</p>
@@ -88,7 +97,7 @@
                             </a>
                     </div>
                     <div class="col col-xl-4 col-md-6">
-                        <a href="./news.html" class="news_box">
+                        <a href="./news.html" class="news_box" data-title="xx系派出全員大一的隊伍參賽，已x:o壓倒性成績獲取進入第二輪循環賽的資格！">
                             <div class="card_container">
                                 <div class="news_img2">&nbsp</div>
                                 <p class="news_article">xx系派出全員大一的隊伍參賽，已x:o壓倒性成績獲取進入第二輪循環賽的資格！</p>
@@ -96,23 +105,15 @@
                         </a>
                     </div>
                     <div class="col col-xl-4 col-md-6">
-                        <a href="./news.html" class="news_box">
+                        <a href="./news.html" class="news_box" data-title="第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！">
                             <div class="card_container">
                                 <div class="news_img3">&nbsp</div>
                                 <p class="news_article">第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！</p>
                             </div>    
                         </a>
-                    </div>
-                    <div class="col col-xl-4 col-md-6">
-                        <a href="./news.html" class="news_box">
-                            <div class="card_container">
-                                <div class="news_img1">&nbsp</div>
-                                <p class="news_article">Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！</p>
-                            </div>    
-                        </a>
-                </div>
+                    </div>    
                 <div class="col col-xl-4 col-md-6">
-                    <a href="./news.html" class="news_box">
+                    <a href="./news.html" class="news_box" data-title="xx系派出全員大一的隊伍參賽，已x:o壓倒性成績獲取進入第二輪循環賽的資格！">
                         <div class="card_container">
                             <div class="news_img2">&nbsp</div>
                             <p class="news_article">xx系派出全員大一的隊伍參賽，已x:o壓倒性成績獲取進入第二輪循環賽的資格！</p>
@@ -120,7 +121,7 @@
                     </a>
                 </div>
                 <div class="col col-xl-4 col-md-6">
-                    <a href="./news.html" class="news_box">
+                    <a href="./news.html" class="news_box" data-title="第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！">
                         <div class="card_container">
                             <div class="news_img3">&nbsp</div>
                             <p class="news_article">第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！</p>
@@ -128,7 +129,23 @@
                     </a>
                 </div>
                 <div class="col col-xl-4 col-md-6">
-                    <a href="./news.html" class="news_box">
+                    <a href="./news.html" class="news_box" data-title="Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！">
+                        <div class="card_container">
+                            <div class="news_img1">&nbsp</div>
+                            <p class="news_article">Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！</p>
+                        </div>    
+                    </a>
+                </div>
+                <div class="col col-xl-4 col-md-6">
+                    <a href="./news.html" class="news_box" data-title="第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！">
+                        <div class="card_container">
+                            <div class="news_img3">&nbsp</div>
+                            <p class="news_article">第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！</p>
+                        </div>    
+                    </a>
+                </div>
+                <div class="col col-xl-4 col-md-6">
+                    <a href="./news.html" class="news_box" data-title="Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！">
                         <div class="card_container">
                             <div class="news_img1">&nbsp</div>
                             <p class="news_article">Xxx老師在己方僅剩一名的成員下，強勢爆發，找出所有對方成員，逆轉戰局！</p>
@@ -136,21 +153,14 @@
                     </a>
             </div>
             <div class="col col-xl-4 col-md-6">
-                <a href="./news.html" class="news_box">
+                <a href="./news.html" class="news_box" data-title="xx系派出全員大一的隊伍參賽，已x:o壓倒性成績獲取進入第二輪循環賽的資格！">
                     <div class="card_container">
                         <div class="news_img2">&nbsp</div>
                         <p class="news_article">xx系派出全員大一的隊伍參賽，已x:o壓倒性成績獲取進入第二輪循環賽的資格！</p>
                     </div>    
                 </a>
             </div>
-            <div class="col col-xl-4 col-md-6">
-                <a href="./news.html" class="news_box">
-                    <div class="card_container">
-                        <div class="news_img3">&nbsp</div>
-                        <p class="news_article">第一輪淘汰賽結果已出爐！傳統強隊xx系不幸遇上去年冠軍xx系，遺憾退場！</p>
-                    </div>    
-                </a>
-            </div>
+           
                 </div>
             </div> 
             

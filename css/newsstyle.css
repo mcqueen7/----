@@ -153,6 +153,21 @@ text-decoration-line: underline ;
     
 }
 /* -----------------------------------------------header----------------------- */
+
+.search{
+    width: 77%;
+    margin: 20px auto;
+}
+
+.search_btn{
+    width: 100px;
+
+    color: rgba(92, 45, 156, 1);
+    border-color: rgba(92, 45, 156, 1);
+}
+.search_btn:hover{
+background-color:rgba(92, 45, 156, 1);
+}
 .card_container {
     width: 300px;
     height: 275px;
@@ -176,6 +191,7 @@ text-decoration-line: underline ;
     font-size: 40px;
     font-weight: bold;  
 }
+
 .news_box>div{
     background-color: rgb(255, 227, 248);;
 }
@@ -209,6 +225,7 @@ text-decoration-line: underline ;
     text-decoration: none;
     overflow: hidden;
     color: black;
+    
 }
 .news_box .card_container{
     transition: all;

@@ -68,6 +68,36 @@ $tosignout.click(function(){
   
 });
 
+var t1 = new gsap.timeline({
+  scrollTrigger: {
+      trigger: ".intro_part",
+      pin: false, // pin the trigger element while active
+      start: "center center", // when the top of the trigger hits the top of the viewport
+      end: "+=400", // end after scrolling 500px beyond the start
+      // yoyo:true,
+      // scrub: true,
+      // markers: true,
+      id: "intro_part",
+    },
+});
+t1.fromTo(".intro_part",{x: -1000,opacity:0},{x:0,opacity:1}).yoyo(true);
+
+var t2 = new gsap.timeline({
+  scrollTrigger: {
+      trigger: ".news_part",
+      pin: false, // pin the trigger element while active
+      start: "top center", // when the top of the trigger hits the top of the viewport
+      end: "+=400", // end after scrolling 500px beyond the start
+      // yoyo:true,
+      // scrub: true,
+      // markers: true,
+      id: "nrws_part",
+    },
+});
+t2.fromTo(".news_part",{x: 1000,opacity:0},{x:0,opacity:1}).yoyo(true);
+
+
+
 
 
 

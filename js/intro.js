@@ -26,7 +26,7 @@ var t1 = new gsap.timeline({
       start: "center bottom", // when the top of the trigger hits the top of the viewport
       end: "+=400", // end after scrolling 500px beyond the start
       // yoyo:true,
-      // scrub: true,
+      scrub: true,
       // markers: true,
       id: "origin_part",
     },
@@ -42,7 +42,7 @@ var t2 = new gsap.timeline({
       start: "center bottom", // when the top of the trigger hits the top of the viewport
       end: "+=400", // end after scrolling 500px beyond the start
       // yoyo:true,
-      // scrub: true,
+      scrub: true,
       // markers: true,
       id: "minterm_part",
     },
@@ -58,7 +58,7 @@ var t3 = new gsap.timeline({
       start: "center bottom", // when the top of the trigger hits the top of the viewport
       end: "+=300", // end after scrolling 500px beyond the start
       // yoyo:true,
-      // scrub: true,
+      scrub: true,
       // markers: true,
       id: "future_part",
     },

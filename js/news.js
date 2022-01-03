@@ -54,7 +54,45 @@ $tosignout.click(function(){
   
 });
 
+$(".serch_btn").click(function(){
+  
+    // console.log("放手");
+   var value = $(this).val().toLowerCase();
+   console.log(value);
+  if(!value){
+    $('.list-search-style').html('');
+    // console.log("論");
+  }
+  else{
+    _searchStart(value);
+  }
+function _searchStart(v){
+  // console.log("搜");
+  $('.list-search-style').html(
+    '.container a:not([data-title*="' + v + '"]) {display: none;}'
+  );
+}
 
+});
+const $search = $('#search');
+$search.on('change paste keyup',function(){
+    // console.log("放手");
+   var value = $(this).val().toLowerCase();
+   console.log(value);
+  if(!value){
+    $('.list-search-style').html('');
+    // console.log("論");
+  }
+  else{
+    _searchStart(value);
+  }
+function _searchStart(v){
+  // console.log("搜");
+  $('.list-search-style').html(
+    '.container a:not([data-title*="' + v + '"]) {display: none;}'
+  );
+}
+});
 
 
 
