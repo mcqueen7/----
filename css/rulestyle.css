@@ -174,6 +174,7 @@ text-decoration-line: underline ;
 .forasidebar{
     display: flex;
     height: auto;
+    width: auto;
 }
 .content_container{
     display: flex;
@@ -257,6 +258,7 @@ text-decoration-line: underline ;
 
 .article_container{
     max-width: 90%;
+    width: auto;
 }
 .mid_title{
     list-style: none;
@@ -361,6 +363,10 @@ margin-left: 50px;
     .footer .logo_bottom{
         display: none;
     }
+    .aside_bar{
+        margin: 0;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -396,5 +402,19 @@ margin-left: 50px;
     .banner_container{
        display: none;
     }
-    
+    .forasidebar{
+        /* flex-wrap:wrap ; */
+        
+    }
+    .field{
+
+        width: 400px;
+    }
+    .content_container{
+        margin-left: 50px;
+    }
+    .aside_bar{
+      display: none;
+    }
+   
 }
