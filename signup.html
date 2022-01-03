@@ -25,7 +25,7 @@
     <script type="text/javascript" src="./js/join.js"></script>
     <!-- <script type="text/javascript" src="./js/vender/wow.min.js"></script> -->
 
-    <title>校園躲貓貓大賽立即報名</title>
+    <title>校園躲貓貓大賽註冊</title>
 </head>
 <body>
     <header>    
@@ -73,50 +73,43 @@
     <div class="banner_container">
         <img src="./images/mainpicture.png" alt="banner" class="banner_part">
     </div>  
-    <div class="profile_part">
-      <div class="card shadow mt-5">
-        <div class="card-header text-center display-4">
-           會員資料
-        </div>
-        <div class="card-body">
-           <div class="avatar-bg"></div>
-           <img class="avatar-image rounded-circle rounded-circle-border shadow" src="" alt=" ">
-           <div class="card-body text-center">
-              <p class="card-text avatar-name"></p>
-              <p class="card-text avatar-email"></p>
-              <div class="row mt-5 px-2">
-                 <button type="button" class="btn col-sm-12 btn-info" id="btnSignOut">登出</button>
-              </div>
-           </div>
-        </div>
-      </div>
-    </div>
+   
 
 
         <div class="hr"></div>
-        <div class="firebase_chat">
-          <div class="card shadow chat_card">
-              <div class="card-header text-center chat_title">
-                  會員留言板
-              </div>
-              <div class="card-body">
-                  <ul class="message-list" id="message-list1"></ul>
-              </div>
-              <div class="container card-footer chat_keyin">
-                  <div class="row g-1">
-                      <div class="col-xl-9">
-                          <input type="text" class="form-control-plaintext message-field" id="message-field1" placeholder="輸入留言...">  
-                      </div>
-                      <div class="col-xl-1">
-                          <input type="color" value="#0091FF" id="color">
-                      </div>
-                      <div class="col-xl-2">
-                        <button type="button" class="send_btn" id="send_btn" value="留言"> 留言 </button>
-                      </div>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+                <div class="card shadow mt-5">
+                  <div class="card-header text-center display-4">
+                    註冊會員
                   </div>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="userName" class="form-control-label">使用者名稱：</label>
+                      <input type="text" class="form-control" id="userName" placeholder="輸入使用者名稱">
+                    </div>
+                    <div class="form-group">
+                      <label for="email" class="form-control-label">信箱:</label>
+                      <input type="text" class="form-control" id="email" placeholder="Example@mail.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="form-control-label">密碼:</label>
+                      <input type="password" class="form-control" id="password" placeholder="不得少於6個字">
+                    </div>
+                    <div class="form-group">
+                      <label for="photoURL" class="form-control-label">相片連結URL:</label>
+                      <input type="text" class="form-control" id="photoURL" placeholder="輸入相片連結">
+                    </div>
+                    <div class="row mt-5 px-2">
+                      <button type="button" class="btn col-sm-12 btn-info shadow" id="btnSignUp">註冊</button>
+                      <div class="card-text text-info pt-3" id="sign-info">未登入...</div>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
           </div>
-        </div>
       
 
 
