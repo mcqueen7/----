@@ -157,11 +157,16 @@ text-decoration-line: underline ;
 .search{
     width: 77%;
     margin: 20px auto;
+  
 }
+#search{
+    border-radius: 50px;
+    border:solid 2px rgba(92, 45, 156, 1);
 
+}
 .search_btn{
     width: 100px;
-
+    border-radius: 50px;
     color: rgba(92, 45, 156, 1);
     border-color: rgba(92, 45, 156, 1);
 }
