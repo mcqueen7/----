@@ -8,6 +8,7 @@ $(document).ready(function(){
     messagingSenderId: "1090006288916",
     appId: "1:1090006288916:web:41200ab4edbbe818377501"
   });
+  const auth = firebase.auth();
   let check=0;
 // Listening Login User
 firebase.auth().onAuthStateChanged(function (user) {
