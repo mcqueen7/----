@@ -373,9 +373,10 @@ margin-left: 50px;
     .navbar{
         height: auto;
         padding-top: 0%;
-        height: 15%;
+/*         height: 15%; */
     }
     .navbar-brand img{
+        margin:20px;
         padding-top: 0%;
         width: 100px;
     }
